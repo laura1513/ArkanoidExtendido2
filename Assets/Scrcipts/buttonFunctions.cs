@@ -18,4 +18,8 @@ public class buttonFunctions : MonoBehaviour
     {
         SceneManager.LoadScene("inicio");
     }
+    public void Info()
+    {
+        SceneManager.LoadScene("info");
+    }
 }
