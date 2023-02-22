@@ -14,4 +14,8 @@ public class buttonFunctions : MonoBehaviour
     {
         SceneManager.LoadScene("seleccionNiveles");
     }
+    public void Inicio()
+    {
+        SceneManager.LoadScene("inicio");
+    }
 }
