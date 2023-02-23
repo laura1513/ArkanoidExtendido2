@@ -22,4 +22,24 @@ public class buttonFunctions : MonoBehaviour
     {
         SceneManager.LoadScene("info");
     }
+
+    [SerializeField] private GameObject botonPause;
+    [SerializeField] private GameObject menuPause;
+    
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("pauseMenu");
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("nivel1");
+    }
+    public void Reanudar()
+    {
+        Time.timeScale = 1f;
+        
+    }
 }
