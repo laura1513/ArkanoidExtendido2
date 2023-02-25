@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class menuPause : MonoBehaviour
 {
@@ -15,6 +16,21 @@ public class menuPause : MonoBehaviour
     public void Reanudar()
     {
         Time.timeScale = 1f;
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(false);
+    }
+    public void RestartN1()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("nivel1");
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(false);
+    }
+
+    public void Home()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("inicio");
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
     }
