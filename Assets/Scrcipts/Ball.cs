@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
     // Movement Speed
     public float speed = 100.0f;
+    [SerializeField] public GameObject menuGameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,10 @@ public class Ball : MonoBehaviour
 
             // Set Velocity with dir * speed
             GetComponent<Rigidbody2D>().velocity = dir * speed;
+        } else if (col.gameObject.name == "border_bottom")
+        {
+            Time.timeScale = 0f;
+            menuGameOver.SetActive(true);
         }
     }
 }

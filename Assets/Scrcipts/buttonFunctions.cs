@@ -10,6 +10,16 @@ public class buttonFunctions : MonoBehaviour
         SceneManager.LoadScene("nivel1");
     }
 
+    public void Nivel2()
+    {
+        SceneManager.LoadScene("nivel2");
+    }
+
+    public void Nivel3()
+    {
+        SceneManager.LoadScene("nivel3");
+    }
+
     public void SelectLevels()
     {
         SceneManager.LoadScene("seleccionNiveles");
