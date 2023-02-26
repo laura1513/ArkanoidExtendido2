@@ -23,7 +23,8 @@ public class Puntos : MonoBehaviour
         puntos += puntosInicio;
         if (puntos == 600)
         {
-            menuGanar.setActive(true);
+            Time.timeScale = 0f;
+            menuGanar.SetActive(true);
         }
     }
 }

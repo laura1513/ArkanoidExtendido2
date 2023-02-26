@@ -26,6 +26,30 @@ public class menuPause : MonoBehaviour
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
     }
+    public void RestartN2()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("nivel2");
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(false);
+    }
+    public void Nivel2()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("nivel2");
+    }
+    public void RestartN3()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("nivel3");
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(false);
+    }
+    public void Nivel3()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("nivel3");
+    }
     public void Home()
     {
         Time.timeScale = 1f;
