@@ -7,6 +7,7 @@ public class Puntos : MonoBehaviour
 {
     private float puntos;
     private TextMeshProUGUI textMesh;
+    [SerializeField] public GameObject menuGanar;
 
     private void Start()
     {
@@ -20,5 +21,9 @@ public class Puntos : MonoBehaviour
 
     public void SumarPuntos(float puntosInicio) {
         puntos += puntosInicio;
+        if (puntos == 600)
+        {
+            menuGanar.setActive(true);
+        }
     }
 }

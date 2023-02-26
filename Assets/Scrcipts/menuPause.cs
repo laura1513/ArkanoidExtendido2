@@ -26,7 +26,6 @@ public class menuPause : MonoBehaviour
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
     }
-
     public void Home()
     {
         Time.timeScale = 1f;
