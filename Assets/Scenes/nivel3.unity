@@ -11166,7 +11166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edafdb30decea017a62ed3de863f1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 150
   menuGameOver: {fileID: 181284053}
 --- !u!50 &937132030
 Rigidbody2D:
