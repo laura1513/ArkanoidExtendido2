@@ -7,11 +7,13 @@ public class Puntos : MonoBehaviour
 {
     private float puntos;
     private TextMeshProUGUI textMesh;
+    //private AdManager adManager;
     [SerializeField] public GameObject menuGanar;
 
     private void Start()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
+        //adManager = FindObjectOfType<AdManager>();
     }
 
     private void Update()
@@ -25,6 +27,14 @@ public class Puntos : MonoBehaviour
         {
             Time.timeScale = 0f;
             menuGanar.SetActive(true);
+            /*if (adManager != null)
+            {
+                adManager.ShowInterstitialAd("banner", adManager);
+            }
+            else
+            {
+                Debug.LogWarning("AdManager no encontrado en la escena.");
+            }*/
         }
     }
 }
