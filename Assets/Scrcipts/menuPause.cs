@@ -8,12 +8,26 @@ public class menuPause : MonoBehaviour
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
     [SerializeField] private GameObject menuGanar;
+    private AdsManager adsManager;
+    void Start()
+    {
+        // Encuentra el objeto AdsManager en la escena
+        adsManager = FindObjectOfType<AdsManager>();
+    }
     public void Pausa()
     {
         Time.timeScale = 0f;
         botonPausa.SetActive(false);
         menuPausa.SetActive(true);
         menuGanar.SetActive(false);
+        if (adsManager != null)
+        {
+            adsManager.ShowInterstitialAd();
+        }
+        else
+        {
+            Debug.LogError("AdsManager not found");
+        }
     }
     public void Reanudar()
     {
